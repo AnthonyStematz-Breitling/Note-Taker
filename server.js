@@ -25,10 +25,34 @@ app.get("/api/notes", function(req, res) {
         res.json(allNotes)
     });
 });
+let num = 0
+app.post("/api/notes", function(req,res){
+    num++
+    var newNote = req.body
+    console.log(newNote)
+    //takes new note
+    //assigns unique id to the note
+    newNote.id = String(num)
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) throw err;
+        let allNotes = JSON.parse(data);
+        allNotes.push(newNote)
+        fs.writeFile("./db/db.json", JSON.stringify(allNotes), (err, data) =>{
+            if(err) throw err;
+            res.json(allNotes)
+        })
+    });
+    
+    //transfer that note into a JSON object
+    //put it into the the data base
+    //return the updated notes 
+});
+
 
     //takes the unique id of this note
     //finds the note with that id in the database
     //removes that note
+    
 app.get("*", function(req, res) {
     res.sendFile(path.join(`${__dirname}/public/index.html`));
 });
