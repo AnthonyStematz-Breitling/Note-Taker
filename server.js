@@ -48,11 +48,23 @@ app.post("/api/notes", function(req,res){
     //return the updated notes 
 });
 
-
+app.delete("/api/notes/:id", function(req, res){
+    var  noteId = req.params.id;
+    console.log(noteId)
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) throw err;
+        let allNotes = JSON.parse(data);
+        console.log(allNotes)
+        let afterRemoved = allNotes.filter(value => value.id !== noteId);
+        fs.writeFile("./db/db.json", JSON.stringify(afterRemoved), (err, data) =>{
+            if(err) throw err;
+            res.json(afterRemoved)
+        })
+    });
     //takes the unique id of this note
     //finds the note with that id in the database
     //removes that note
-    
+});
 app.get("*", function(req, res) {
     res.sendFile(path.join(`${__dirname}/public/index.html`));
 });
