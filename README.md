@@ -1,4 +1,6 @@
-# Note-Taker                 
+# Note-Taker 
+![image](https://user-images.githubusercontent.com/64037800/91503349-d7fef880-e88f-11ea-9151-e19495d6149c.png)
+
        
 ## Description
 A full stack application that allows the user to save and delete notes
