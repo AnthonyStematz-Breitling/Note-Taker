@@ -1,4 +1,5 @@
 # Note-Taker 
+![image](https://user-images.githubusercontent.com/64037800/91503400-f6fd8a80-e88f-11ea-9092-59aaba3e2a0b.png)
 ![image](https://user-images.githubusercontent.com/64037800/91503349-d7fef880-e88f-11ea-9151-e19495d6149c.png)
 
        
