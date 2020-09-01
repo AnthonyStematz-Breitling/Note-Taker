@@ -17,7 +17,7 @@ A full stack application that allows the user to save and delete notes
 
         
 ## Questions?
-* [Anthony Stematz-Breitling](https://github.com/Anthony Stematz-Breitling)
+* [Anthony Stematz-Breitling](https://github.com/AnthonyStematz-Breitling)
 * stembreit@gmail.com
         
  If you have any additional question feel free to message or email me.
